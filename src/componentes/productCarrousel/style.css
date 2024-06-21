@@ -1,7 +1,6 @@
 .product-carousel .carousel-item {
     display: flex;
     justify-content: center;
-    margin: 0 3px; /* Ajuste para garantir que a margem total entre os itens seja no máximo 6px */
   }
   
   .product-card {
