@@ -1,0 +1,192 @@
+/* reset.css */
+.ant-menu-title-content {
+  font-size: 18px !important;
+}
+
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML5 display settings */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+/* Listas */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Bloquear elementos embutidos */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Formularios */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+/* Tipografia */
+body {
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+address {
+  font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Tabela */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* Formulario */
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:focus {
+  outline: none;
+}

@@ -1,0 +1,100 @@
+.product-details {
+  padding: 40px !important;
+}
+
+.product-images {
+  display: flex;
+}
+
+.thumbnails-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-slider {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.image-slider img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+  border-radius: 8px;
+}
+
+.image-slider img.active {
+  border: 2px solid black;
+}
+
+.main-image-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image img {
+  max-height: 500px;
+  width: 450px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product-info h2 {
+  margin-bottom: 20px;
+}
+
+.product-info h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.product-info .installments {
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.quantity-input {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+
+  height: 3rem !important;
+  width: 7rem !important;
+}
+
+.quantity-input .quantity-input-field {
+  text-align: center;
+  max-width: 60px;
+  border: none;
+}
+
+.quantity-input .btn-outline-secondary {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+}
+
+.btn-addCart {
+  width: 100% !important;
+  height: 50px !important;
+  background-color: rgb(0, 6, 121) !important;
+}
+.btn-addCart:hover {
+  background-color: rgb(4, 4, 154) !important;
+}

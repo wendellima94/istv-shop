@@ -1,0 +1,42 @@
+.product-carousel .carousel-item {
+    display: flex;
+    justify-content: center;
+    margin: 0 3px; /* Ajuste para garantir que a margem total entre os itens seja no máximo 6px */
+  }
+  
+  .product-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin: 3px; /* Ajuste a margem entre os itens */
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-card-image {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-card-image img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .card-body .btn-primary {
+    width: 100%;
+    background-color: rgb(0, 6, 121);
+    border: none;
+  }
+  
