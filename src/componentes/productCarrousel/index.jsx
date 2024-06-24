@@ -1,53 +1,97 @@
-import React, { useState } from 'react';
-import { Carousel, Card, Button } from 'react-bootstrap';
-import './style.css';
+import React, { useState } from "react";
+import "./style.css";
 
-const ProductCarousel = ({ products }) => {
-  const [index, setIndex] = useState(0);
+const products = [
+  {
+    name: "Produto 1",
+    description: "Descrição do produto 1.",
+    price: 199.99,
+    images: [
+      "https://via.placeholder.com/300x200?text=Imagem+1",
+      "https://via.placeholder.com/300x200?text=Imagem+2",
+    ],
+  },
+  {
+    name: "Produto 2",
+    description: "Descrição do produto 2.",
+    price: 299.99,
+    images: [
+      "https://via.placeholder.com/300x200?text=Imagem+1",
+      "https://via.placeholder.com/300x200?text=Imagem+2",
+    ],
+  },
+  {
+    name: "Produto 3",
+    description: "Descrição do produto 2.",
+    price: 399.99,
+    images: [
+      "https://via.placeholder.com/300x200?text=Imagem+1",
+      "https://via.placeholder.com/300x200?text=Imagem+2",
+    ],
+  },
+  {
+    name: "Produto 4",
+    description: "Descrição do produto 2.",
+    price: 499.99,
+    images: [
+      "https://via.placeholder.com/300x200?text=Imagem+1",
+      "https://via.placeholder.com/300x200?text=Imagem+2",
+    ],
+  },
+  {
+    name: "Produto 5",
+    description: "Descrição do produto 2.",
+    price: 599.99,
+    images: [
+      "https://via.placeholder.com/300x200?text=Imagem+1",
+      "https://via.placeholder.com/300x200?text=Imagem+2",
+    ],
+  },
+];
 
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
-  const itemsPerPage = 4;
-  const groupedProducts = [];
-
-  for (let i = 0; i < products.length; i += itemsPerPage) {
-    groupedProducts.push(products.slice(i, i + itemsPerPage));
-  }
-
+const ProductCarrousel = () => {
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} className="product-carousel">
-      {groupedProducts.map((group, idx) => (
-        <Carousel.Item key={idx}>
-          <div className="d-flex justify-content-center">
-            {group.map((product, index) => (
-              <Card className="product-card" key={index}>
-                <div className="product-card-image">
-                  <img
-                    src={product.images[0]}
-                    alt={product.name}
-                    className="card-img-top"
-                    onMouseEnter={(e) => e.currentTarget.src = product.images[1]}
-                    onMouseLeave={(e) => e.currentTarget.src = product.images[0]}
-                  />
-                </div>
-                <Card.Body>
-                  <Card.Title>{product.name}</Card.Title>
-                  <Card.Text>{product.description}</Card.Text>
-                  <Card.Text>
-                    <strong>${product.price.toFixed(2)}</strong> <br />
-                    ou 12x de ${(product.price / 12).toFixed(2)}
-                  </Card.Text>
-                  <Button variant="primary">Adicionar ao Carrinho</Button>
-                </Card.Body>
-              </Card>
-            ))}
-          </div>
-        </Carousel.Item>
+    <div className="row">
+      {products.map((product, index) => (
+        <ProductCard key={index} product={product} />
       ))}
-    </Carousel>
+    </div>
   );
 };
 
-export default ProductCarousel;
+const ProductCard = ({ product }) => {
+  const [currentImage, setCurrentImage] = useState(product.images[0]);
+
+  const handleMouseEnter = () => {
+    setCurrentImage(product.images[1]);
+  };
+
+  const handleMouseLeave = () => {
+    setCurrentImage(product.images[0]);
+  };
+
+  return (
+    <div className="col-md-3 col-sm-6">
+      <div className="product-grid">
+        <div className="product-image" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <a href="#" className="image">
+            <img src={currentImage} alt={product.name} />
+          </a>
+          {/* <span className="product-discount-label"></span> */}
+          <ul className="product-links">
+            <li><a href="#"><i className="fa fa-search"></i></a></li>
+            <li><a href="#"><i className="fa fa-heart"></i></a></li>
+            <li><a href="#"><i className="fa fa-random"></i></a></li>
+          </ul>
+          <a href="#" className="add-to-cart">Adicionar ao carrinho</a>
+        </div>
+        <div className="product-content">
+          <h3 className="title"><a href="#">{product.name}</a></h3>
+          <div className="price">${product.price}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductCarrousel;

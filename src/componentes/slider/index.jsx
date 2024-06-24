@@ -5,7 +5,7 @@ export default function SliderTop() {
   return (
     <>
       <div>
-        <img src="public/bgSliderTop.jpg" alt="" className="bg-image" />
+        <img src="/bgSliderTop.jpg" alt="" className="bg-image" />
       </div>
     </>
   );
