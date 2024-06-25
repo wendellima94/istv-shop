@@ -1,11 +1,15 @@
-import "./App.css";
 import React from "react";
-import HomePage from "./pages/homePage";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
+import Menu from "./componentes/menu";
 
-const App = () => (
-  <div className="App">
-    <HomePage />
-  </div>
-);
+const App = () => {
+  return (
+    <Router>
+      <Menu />
+      <AppRoutes />
+    </Router>
+  );
+};
 
 export default App;

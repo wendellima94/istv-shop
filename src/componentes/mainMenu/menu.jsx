@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 import {
   HomeFilled,
   ContactsOutlined,
@@ -18,7 +19,7 @@ import { Menu } from "antd";
 const items = [
   {
     label: "Home",
-    key: "home",
+    key: "/",
     icon: <HomeFilled />,
   },
   {
@@ -62,7 +63,7 @@ const items = [
   },
   {
     label: "Coleções",
-    key: "colections",
+    key: "collection",
     icon: <CaretDownOutlined fontSize="large" />,
   },
   {
@@ -76,11 +77,15 @@ const items = [
     icon: <ContactsOutlined fontSize="large" />,
   },
 ];
+
 const MainMenu = () => {
   const [current, setCurrent] = useState("mail");
+  const navigate = useNavigate();
+
   const onClick = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
+    navigate(e.key);
   };
 
   return (
@@ -93,4 +98,5 @@ const MainMenu = () => {
     />
   );
 };
+
 export default MainMenu;
