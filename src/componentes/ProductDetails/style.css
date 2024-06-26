@@ -82,7 +82,6 @@
 }
 
 .quantity-input .btn-outline-secondary {
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,6 +94,25 @@
   height: 50px !important;
   background-color: rgb(0, 6, 121) !important;
 }
+
 .btn-addCart:hover {
   background-color: rgb(4, 4, 154) !important;
+}
+
+@media screen and (max-width: 990px) {
+  .thumbnails-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .main-image {
+    width: 300px;
+    height: 400px;
+  }
+  /* .main-image main {
+  }
+
+  .image-slider img {
+  } */
 }

@@ -1,5 +1,6 @@
 .menuContainer {
   position: relative;
+  width: auto;
 }
 
 .fixedMenu {
@@ -8,7 +9,43 @@
   left: 0;
   width: 100%;
   background-color: white;
-  z-index: 999;
+  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: top 0.5s ease-out;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .subHeaderTop {
+    background-color: blanchedalmond;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .menuContainer {
+    display: none;
+  }
+  .searchItems {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    margin: 0 20px;
+  }
+  .mobileMenu {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    position: inherit;
+    align-self: flex-end;
+  }
 }
