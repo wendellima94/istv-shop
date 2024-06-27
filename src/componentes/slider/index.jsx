@@ -1,12 +1,10 @@
 import React from "react";
 import "./style.css";
 
-export default function SliderTop() {
+export default function SliderTop({ imageSrc }) {
   return (
-    <>
-      <div>
-        <img src="/bgSliderTop.jpg" alt="" className="bg-image" />
-      </div>
-    </>
+    <div>
+      <img src={imageSrc} alt="" className="bg-image" />
+    </div>
   );
 }

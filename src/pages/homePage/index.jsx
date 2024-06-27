@@ -22,10 +22,10 @@ export default function HomePage() {
 
   return (
     <>
-      <SliderTop />
+      <SliderTop imageSrc="bg-1.jpeg" />
       <ProductDetails product={product} />
       <div>
-        <SliderTop />
+      <SliderTop imageSrc="bg/bg-2.png" />
         <ProductDetails product={product} />
       </div>
       <div>
