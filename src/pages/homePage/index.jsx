@@ -12,28 +12,28 @@ export default function HomePage() {
     description: "Descrição detalhada do produto.",
     price: 199.99,
     images: [
-      "https://via.placeholder.com/400x400?text=Imagem+1",
-      "https://via.placeholder.com/400x400?text=Imagem+2",
-      "https://via.placeholder.com/400x400?text=Imagem+3",
-      "https://via.placeholder.com/400x400?text=Imagem+4",
-      "https://via.placeholder.com/400x400?text=Imagem+5",
+      "products/Colágeno.png",
+      "products/Emagrecedor.png",
+      "products/Estimulante.png",
+      "products/Melatonina.png",
+      "products/Multi.png",
     ],
   };
 
   return (
     <>
-      <SliderTop imageSrc="bg-1.jpeg" />
+      <SliderTop imageSrc="bg/bg-1.png" />
       <ProductDetails product={product} />
       <div>
       <SliderTop imageSrc="bg/bg-2.png" />
         <ProductDetails product={product} />
       </div>
       <div>
-        <SliderTop />
+      <SliderTop imageSrc="bg/bg-2.png" />
         <ProductDetails product={product} />
       </div>
       <div>
-        <SliderTop />
+      <SliderTop imageSrc="bg/bg-1.png" />
         <ProductDetails product={product} />
       </div>
       <div>

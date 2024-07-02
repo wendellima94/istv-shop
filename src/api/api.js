@@ -5,8 +5,8 @@ export const products = [
       description: "Descrição do produto 1.",
       price: 199.99,
       images: [
-        "https://via.placeholder.com/300x200?text=Imagem+1",
-        "https://via.placeholder.com/300x200?text=Imagem+2",
+        "products/Colágeno.png",
+        "products/Emagrecedor.png",
       ],
     },
     {
@@ -14,8 +14,8 @@ export const products = [
       description: "Descrição do produto 2.",
       price: 299.99,
       images: [
-        "https://via.placeholder.com/300x200?text=Imagem+1",
-        "https://via.placeholder.com/300x200?text=Imagem+2",
+        "products/Estimulante.png",
+        "products/Melatonina.png",
       ],
     },
     {
@@ -23,8 +23,8 @@ export const products = [
       description: "Descrição do produto 2.",
       price: 399.99,
       images: [
-        "https://via.placeholder.com/300x200?text=Imagem+1",
-        "https://via.placeholder.com/300x200?text=Imagem+2",
+        "products/Multi.png",
+        "products/Reg Insulina.png",
       ],
     },
     {
@@ -32,8 +32,8 @@ export const products = [
       description: "Descrição do produto 2.",
       price: 499.99,
       images: [
-        "https://via.placeholder.com/300x200?text=Imagem+1",
-        "https://via.placeholder.com/300x200?text=Imagem+2",
+        "products/Ton Capilar.png",
+        "products/Reg Insulina.png",
       ],
     },
     {
@@ -41,8 +41,8 @@ export const products = [
       description: "Descrição do produto 2.",
       price: 599.99,
       images: [
-        "https://via.placeholder.com/300x200?text=Imagem+1",
-        "https://via.placeholder.com/300x200?text=Imagem+2",
+        "products/Colágeno.png",
+        "products/Emagrecedor.png",
       ],
     },
   ]; 
