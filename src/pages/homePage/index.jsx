@@ -25,15 +25,15 @@ export default function HomePage() {
       <SliderTop imageSrc="bg/bg-1.png" />
       <ProductDetails product={product} />
       <div>
-      <SliderTop imageSrc="bg/bg-2.png" />
+        <SliderTop imageSrc="bg/bg-2.png" />
         <ProductDetails product={product} />
       </div>
       <div>
-      <SliderTop imageSrc="bg/bg-2.png" />
+        <SliderTop imageSrc="bg/bg-3.png" />
         <ProductDetails product={product} />
       </div>
       <div>
-      <SliderTop imageSrc="bg/bg-1.png" />
+        <SliderTop imageSrc="bg/bg-4.png" />
         <ProductDetails product={product} />
       </div>
       <div>
