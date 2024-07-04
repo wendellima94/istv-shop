@@ -47,5 +47,16 @@
     display: flex;
     position: inherit;
     align-self: flex-end;
+    border-bottom: 0.3px solid rgba(0, 0, 0, 0.232);
+  }
+  .contentMobilleMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Garante que o menu ocupe toda a largura da viewport */
+    z-index: 9999;
+  }
+  .contentPlaceholder {
+    height: 100px; /* Ajuste a altura conforme necessário para corresponder à altura do menu móvel */
   }
 }

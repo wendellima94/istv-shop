@@ -1,6 +1,29 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.headerTop {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.scroller {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroller span {
+  display: inline-block;
+  padding-right: 50px;
+}
 
 .row {
   display: flex;
@@ -31,7 +54,7 @@ body {
 .product-grid {
   text-align: center;
   position: relative;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   margin-bottom: 30px;
 }
 
@@ -88,14 +111,14 @@ body {
   line-height: 38px;
   width: 38px;
   height: 38px;
-  border: 1px solid #333;
-  border-bottom: none;
+  /* border: 1px solid #333; */
+  /* border-bottom: none; */
   display: block;
   transition: all 0.3s;
 }
 
 .product-grid .product-links li:last-child a {
-  border-bottom: 1px solid #333;
+  /* border-bottom: 1px solid #333; */
 }
 
 .product-grid .product-links li a:hover {
@@ -128,18 +151,18 @@ body {
 .product-grid .product-content {
   background: #fff;
   padding: 15px;
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1) inset;
+  /* box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1) inset; */
 }
 
 .product-grid .title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
   margin: 0 0 7px;
 }
 
 .product-grid .title a {
-  color: #777;
+  color: #000;
   transition: all 0.3s ease 0s;
 }
 
@@ -148,15 +171,16 @@ body {
 }
 
 .product-grid .price {
-  color: #0d0d0d;
-  font-size: 14px;
+  color: #777;
+  transition: all 0.3s ease 0s;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .product-grid .price span {
   color: #888;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: line-through;
 }
 

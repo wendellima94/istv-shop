@@ -32,8 +32,13 @@ export default function Menu() {
     <>
       <div className={`menuContainer ${isMenuFixed ? "fixedMenu" : ""}`}>
         <header className="headerTop">
-          Os melhores produtos você encontra aqui!
+          <div className="scroller">
+            <a>Os melhores produtos você encontra aqui!</a>
+            <a>Promoções incríveis!</a>
+            <a>Novidades toda semana!</a>
+          </div>
         </header>
+
         <header className="subHeaderTop">
           <section className="searchItems">
             <SearchContainer />
@@ -47,16 +52,19 @@ export default function Menu() {
         </header>
         <MainMenu />
       </div>
-      <div className="mobileMenu">
-        <Sidebar
-          pageWrapId={"page-wrap"}
-          outerContainerId={"outer-container"}
-        />
+      <div className="contentMobilleMenu">
+        <div className="mobileMenu">
+          <Sidebar
+            pageWrapId={"page-wrap"}
+            outerContainerId={"outer-container"}
+          />
 
-        <section className="searchItems">
-          <SearchContainer />
-        </section>
+          <section className="searchItems">
+            <LoginItemsHeader />
+          </section>
+        </div>
       </div>
+      <div className="contentPlaceholder"></div>
     </>
   );
 }
