@@ -33,9 +33,9 @@ export default function Menu() {
       <div className={`menuContainer ${isMenuFixed ? "fixedMenu" : ""}`}>
         <header className="headerTop">
           <div className="scroller">
-            <a>Os melhores produtos você encontra aqui!</a>
-            <a>Promoções incríveis!</a>
-            <a>Novidades toda semana!</a>
+            <span>Os melhores produtos você encontra aqui!</span>
+            <span>Promoções incríveis!</span>
+            <span>Novidades toda semana!</span>
           </div>
         </header>
 

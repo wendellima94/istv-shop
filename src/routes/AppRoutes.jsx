@@ -2,6 +2,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/homePage";
 import Collection from "../pages/collections";
+import ProductsComponent from "../componentes/products/products";
+import ShoppingCart from "../componentes/shoppingCart/shoppingCart";
 // import Fitness from "../pages/Fitness";
 // import Makeup from "../pages/Makeup";
 // import Manipulated from "../pages/Manipulated";
@@ -15,9 +17,9 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/collection" element={<Collection />} />
+      <Route path="/products" element={<ProductsComponent />} />
+      <Route path="/cart" element={<ShoppingCart />} />
       {/* <Route path="/fitness" element={<Fitness />} />
-      <Route path="/manipulated" element={<Manipulated />} />
-      <Route path="/natural" element={<Natural />} />
       <Route path="/collections" element={<Collections />} />
       <Route path="/tracking" element={<Tracking />} />
       <Route path="/contact" element={<Contact />} /> */}

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
 const ShoppingCartContext = createContext({
   cartItems: [],
@@ -27,14 +27,23 @@ export const ShoppingCartProvider = ({ children }) => {
     } else {
       setCartItems([...cartItems, { ...item, quantity: 1 }]);
     }
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify([...cartItems, { ...item, quantity: 1 }])
+    );
   };
 
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify(cartItems.filter((item) => item.id !== id))
+    );
   };
 
   const clearCart = () => {
     setCartItems([]);
+    localStorage.removeItem("cartItems");
   };
 
   const cartTotal = cartItems.reduce(
