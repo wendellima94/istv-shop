@@ -1,0 +1,28 @@
+.finish-sale-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(42, 36, 121);
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.finish-sale-button .icon {
+  margin-right: 10px;
+}
+
+.finish-sale-button:hover {
+  background-color: rgb(30, 25, 100);
+  transform: scale(1.05);
+}
+
+.finish-sale-button:active {
+  background-color: rgb(20, 15, 80);
+  transform: scale(0.95);
+}

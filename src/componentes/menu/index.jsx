@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import MainMenu from "../mainMenu/menu";
-import LoginItemsHeader from "../menuUsersItems";
 import LogoItemsContent from "../logoItems";
 import SearchContainer from "../search";
 import Sidebar from "../mobileMenu/index";
 import "./style.css";
+import ShoppingCart from "../shoppingCart/shoppingCart";
 
 export default function Menu() {
   const [isMenuFixed, setIsMenuFixed] = useState(false);
@@ -47,7 +47,7 @@ export default function Menu() {
             <LogoItemsContent />
           </section>
           <section className="userItems">
-            <LoginItemsHeader />
+            <ShoppingCart />
           </section>
         </header>
         <MainMenu />
@@ -60,7 +60,7 @@ export default function Menu() {
           />
 
           <section className="searchItems">
-            <LoginItemsHeader />
+            <ShoppingCart />
           </section>
         </div>
       </div>
