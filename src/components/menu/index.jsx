@@ -8,16 +8,22 @@ import ShoppingCart from "../shoppingCart/shoppingCart";
 
 export default function Menu() {
   const [isMenuFixed, setIsMenuFixed] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const threshold = 500;
 
-      if (scrollY > threshold) {
-        setIsMenuFixed(true);
-      } else {
+      if (scrollY > threshold && !isMenuFixed) {
+        setIsTransitioning(true);
+        setTimeout(() => {
+          setIsMenuFixed(true);
+          setIsTransitioning(false);
+        }, 700);
+      } else if (scrollY <= threshold && isMenuFixed) {
         setIsMenuFixed(false);
+        setIsTransitioning(false);
       }
     };
 
@@ -26,11 +32,15 @@ export default function Menu() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isMenuFixed]);
 
   return (
     <>
-      <div className={`menuContainer ${isMenuFixed ? "fixedMenu" : ""}`}>
+      <div
+        className={`menuContainer ${isMenuFixed ? "fixedMenu" : ""} ${
+          isTransitioning ? "menuContainerTransition" : ""
+        }`}
+      >
         <header className="headerTop">
           <div className="scroller">
             <span>Os melhores produtos você encontra aqui!</span>

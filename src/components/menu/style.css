@@ -1,6 +1,12 @@
 .menuContainer {
   position: relative;
   width: auto;
+  transition: top 1s ease-in-out;
+}
+
+.menuContainerTransition {
+  top: -100px;
+  transition: top 1s ease-in-out;
 }
 
 .fixedMenu {
@@ -8,15 +14,31 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: #fff;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: top 0.5s ease-out;
 }
+
+/* Outros estilos permanecem os mesmos */
+
+.headerTop {
+  background-color: #0275d8;
+  color: white;
+}
+
 .scroller {
   display: inline-block;
   padding-left: 100%;
   animation: scroll 25s linear infinite;
+}
+
+.subHeaderTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  justify-content: space-around;
+  margin-right: 40px;
 }
 
 @keyframes scroll {

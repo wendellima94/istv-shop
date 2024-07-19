@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { products as allProducts } from "../../api/api";
 import { useShoppingCart } from "../../contexts/ShoppingCartContext";
 
-export default function ProductsComponent() {
+export default async function ProductsComponent() {
+
   const [products, setProducts] = useState([]);
   const { addToCart } = useShoppingCart();
 
@@ -13,7 +14,10 @@ export default function ProductsComponent() {
   return (
     <div style={{ padding: "80px 10px" }}>
       {products.map((product, index) => (
-        <div style={{ borderBottom: "1px solid black", marginBottom: "20px" }} key={index}>
+        <div
+          style={{ borderBottom: "1px solid black", marginBottom: "20px" }}
+          key={index}
+        >
           <h2>{product.name}</h2>
           <p>{product.description}</p>
           <p>Price: {product.price}</p>

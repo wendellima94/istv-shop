@@ -1,3 +1,4 @@
+
 export const products = [
   {
     id: 1,
@@ -35,3 +36,20 @@ export const products = [
     images: ["products/Colágeno.png", "products/Emagrecedor.png"],
   },
 ];
+
+export const getProducts = async () => {
+  try {
+    const response = await instance.get("/api/v1/product/");
+    const products = response.data.products.map((product) => ({
+      id: product._id,
+      name: product.name,
+      description: product.description,
+      price: product.price,
+      file: product.file,
+    }));
+    return products; // Retorna os dados da resposta formatados como seu array 'products'
+  } catch (error) {
+    console.error("Erro ao buscar produtos:", error);
+    throw error; // Lança o erro para ser tratado onde a função for chamada
+  }
+};

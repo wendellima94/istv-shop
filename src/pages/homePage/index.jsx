@@ -1,44 +1,37 @@
 import React from "react";
-import "./style.css";
+import { useApi } from "../../contexts/apiContext";
+import SliderTop from "../../components/slider/index";
+import ProductDetails from "../../components/ProductDetails";
+import ProductCarousel from "../../components/productCarrousel";
 
-import SliderTop from "../../componentes/slider";
-import ProductDetails from "../../componentes/ProductDetails";
-import ProductCarousel from "../../componentes/productCarrousel";
-import { products } from "../../api/api";
+function HomePage() {
+  const { productData } = useApi();
 
-export default function HomePage() {
-  const product = {
-    name: "Nome do Produto",
-    description: "Descrição detalhada do produto.",
-    price: 199.99,
-    images: [
-      "products/Colágeno.png",
-      "products/Emagrecedor.png",
-      "products/Estimulante.png",
-      "products/Melatonina.png",
-      "products/Multi.png",
-    ],
-  };
+  if (!productData) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <>
       <SliderTop imageSrc="bg/bg-1.png" />
-      <ProductDetails product={product} />
+      <ProductDetails product={productData[1]} />
       <div>
         <SliderTop imageSrc="bg/bg-2.png" />
-        <ProductDetails product={product} />
+        <ProductDetails product={productData[0]} />
       </div>
       <div>
         <SliderTop imageSrc="bg/bg-3.png" />
-        <ProductDetails product={product} />
+        <ProductDetails product={productData[2]} />
       </div>
       <div>
         <SliderTop imageSrc="bg/bg-4.png" />
-        <ProductDetails product={product} />
+        <ProductDetails product={productData[3]} />
       </div>
       <div>
-        <ProductCarousel products={products} />
+        <ProductCarousel products={productData} />
       </div>
     </>
   );
 }
+
+export default HomePage;
